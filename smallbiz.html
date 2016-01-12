@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'IM Fell English', serif;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("http://kangurular.com/_docs/source/Pare%20Baklava%20Bar/IMAG9949%20(Medium).jpg");
+}
+.second{
+  background-image: url("http://3.bp.blogspot.com/-a_w4J5XN6tE/VhzOTFJyssI/AAAAAAAABfs/gpq2g-bFeT0/s1600/SAM_3036.JPG");
+}
+.dessert{
+  background-image: url("https://b.zmtcdn.com/data/reviews_photos/89f/137af75f73ebbeac981238628d3b389f_1428417888.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Pare Baklava</h1>
+<h2>NISANTASI, ISTANBUL</h2>
+<div class="first">
+  <p>Welome to Pare <br />
+  <small>Pare is a concept baklava pastry shop in the heart of Istanbul. Grumpy wizards make toxic brew for the evil Queen and Jack. Grumpy wizards make toxic brew for the evil Queen and Jack. Grumpy wizards make toxic brew for the evil Queen and Jack.</small></p>
+</div>
+
+<div class="second">
+  <p>Tepsi Baklava <span class="price">$30</span><br />
+  <small>Grumpy wizards make toxic brew for the evil Queen and Jack.Grumpy wizards make toxic brew for the evil Queen and Jack.Grumpy wizards make toxic brew for the evil Queen and Jack.Grumpy wizards make toxic brew for the evil Queen and Jack..</small></p>
+</div>
+
+<div class="dessert">
+  <p>Turkish Coffee + Baklava Plate <span class="price">$18</span><br />
+  <small>Grumpy wizards make toxic brew for the evil Queen and Jack.Grumpy wizards make toxic brew for the evil Queen and Jack.Grumpy wizards make toxic brew for the evil Queen and Jack..</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
