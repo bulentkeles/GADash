@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <style>
 
-
-body {
-  margin: 50px;
-  text-align:center;
-  font-family:'Fjalla One';
-  font-size:50px;
-  background: #e6eaf0;
-  }
-
-button {
-  border:0;
-  border-radius: 5px;
-  margin: 40px;
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  color: #fff;
-  background-color: #000;
-  }
 input {
-  font-size: 20px;
-  color:red;
-  text-align: center;
-  font-weight:bold;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: gray;
+  border: 0;
+  border-color: rgba(21, 153, 87, 0.2);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 100px;
   }
+
+.prompt {
+  font-family:'Fjalla One';
+  font-size:40px;
+  padding-top: 2rem;
+  
+  border-top: solid 1px #eff0f1;
+}
 
 .fill {
-  background: white;
-  color: red;
+  background: #ecf0f1;
+  color: #159957;
   border-bottom: 2px black solid;
   font-family: 'Shadows Into Light';
   padding: 0 6px;
@@ -51,8 +50,31 @@ input {
 </head>
 
 <body>
-<div class="prompt"></div>
-<button>Next</button>
+<div class="page-header">
+    <h2 class="project-name">Project 5: Mad Lib Game</h2>
+    <h2 class="project-tagline">This project involves the JS data type "Arrays", counting with JS, translating JS into HTML, if/else statements and more.</h2>
+    <a href="https://bulentkeles.github.com/GADash/" class="btn">go back</a>
+</div>
+
+<div class="main-content">
+<h3>Objective</h3>
+<li>Build an array to hold data</li>
+<li>Write a button to move through the array</li>
+<li>Write and if/else statement</li>
+<li>Capture and return answers via JS</li>
+<li>Build a basic game using JavaScript + CSS</li>
+
+<h3>Example</h3>
+  <div class="prompt"></div>
+  <button class="button2">Next</button>
+
+
+
+<footer class="site-footer">
+<span class="site-footer-owner"><a href="https://bulentkeles.github.com/GADash">Dash Projects</a> is maintained by <a href="https://github.com/bulentkeles">bulentkeles</a>.</span>
+</footer>
+</div>
+
 <script>
 // List of prompts for the user
 var prompts = [
