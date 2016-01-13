@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 
 <head>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <style>
 
-.prompt {
-  margin-top: 20px;
-  font-family: helvetica;
-  font-size: 150px;
-  color: #000;
+
+body {
+  margin: 50px;
+  text-align:center;
+  font-family:'Fjalla One';
+  font-size:50px;
+  background: #e6eaf0;
   }
 
 button {
-  margin-top: 20px;
-  background-color: #000;
-  border: 0;
-  font-size: 20px;
-  color: #fff;
+  border:0;
+  border-radius: 5px;
+  margin: 40px;
+  font-size: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 40px;
   padding-left: 40px;
-  text-decoration: bold;
-  font-style: bold;
-  border-radius: 5px;
-    }
+  padding-right: 40px;
+  color: #fff;
+  background-color: #000;
+  }
+input {
+  font-size: 20px;
+  color:red;
+  text-align: center;
+  font-weight:bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  }
+
+.fill {
+  background: white;
+  color: red;
+  border-bottom: 2px black solid;
+  font-family: 'Shadows Into Light';
+  padding: 0 6px;
+  margin: 4px;
+  }
 
 </style>
 </head>
@@ -41,23 +61,20 @@ var prompts = [
 	'Type a noun'
    ];
 
-var answers = [];
-
+var answers=[];
 // Keep track of current prompt we're on
 var currentPrompt = 0;
 
 // A function that will call the next prompt
 var nextPrompt = function() {
-
-  if (currentPrompt != 0) {
+  //if there's no answer in the form
+  if (currentPrompt != 0){
     answers.push($('input').val());
   }
 	// if there is a next prompt
 	if (currentPrompt < prompts.length) {
-
-
 		// put first prompt in all html elements with class
-		$('.prompt').html(prompts[currentPrompt] + '<br><input type="text">');
+		$('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
 		// move the next prompt into variable currentPrompt
 		currentPrompt = currentPrompt + 1;
 	}
@@ -68,11 +85,11 @@ var nextPrompt = function() {
 	}
 }
 
-//puts the user's input into the html
+//puts user answers into HTML
 var showFinal = function() {
-  $('.prompt').html(answers[0]+' '+answers[1]+' ' +answers[2]);
+  $('.prompt').html('This is the story of <span class="fill">'+answers[0]+'</span> and the <span class="fill">'+answers[1]+'</span> <span class="fill">'+answers[2]+'</span>.');
+  $('button').hide();
 }
-
 // run nextPrompt function when button is clicked
 $('button').click(function() {
 	nextPrompt();
@@ -81,5 +98,4 @@ $('button').click(function() {
 // Show the first prompt as soon as js loads
 nextPrompt();
 </script>
-
 </body>
